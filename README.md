@@ -14,6 +14,10 @@ Associated tools
 
 ## Choosing windows
 
+### Window Stack
+
+All search options create a window stack. The first window in the stack is '%1', the second is '%2', etc. The entire stack is denoted with '%@'. If the stack is omitted, it will default to '%1'.
+
 ### `xdotool search`
 
 Search using various criteria
@@ -90,12 +94,13 @@ This will shift to an active window on a different desktop, and is therefore mor
 * `keydown`: Same as `key`, but only the key press event is sent.
 * `keyup`: Same as `key`, but only the key up event is sent.
 * `type`: Send a string of text.
-* `sleep`:
-* `exec`: 
+* `sleep`: Sleep in seconds ( fractional seconds, e.g. 1.5 or 0.4 are allowed )
+* `exec`: Execute a program.
 
 # Examples
 
 Select window and move it to a specified horizontal position
 
     xdotool selectwindow windowmove 1920 y
+
 
